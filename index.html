@@ -48,6 +48,7 @@ Resources
     </style>
     <script>
     // Grab your access token via https://www.mapbox.com
+    const accessToken = "ACCESS_TOKEN"; // Not required for Wikimedia maps.
     const center      = [ 52.081813, 4.2932258 ];
     const zoom        = 12;
 
@@ -65,7 +66,8 @@ Resources
         {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Wikimedia</a>',
             maxZoom: 18,
-            id: 'mapbox.streets'
+            id: 'mapbox.streets',
+            accessToken: accessToken, // Not required for Wikimedia maps.
         }
     )
     .addTo(map);
